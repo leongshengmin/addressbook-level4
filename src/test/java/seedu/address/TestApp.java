@@ -73,7 +73,6 @@ public class TestApp extends MainApp {
      */
     public AddressBook readStorageAddressBook() {
         try {
-            //saveBackup();
             return new AddressBook(storage.readAddressBook().get());
         } catch (DataConversionException dce) {
             throw new AssertionError("Data is not in the AddressBook format.", dce);
@@ -108,7 +107,8 @@ public class TestApp extends MainApp {
     }
 
     /**
-     * Creates an XML file at the {@code filePath} with the {@code data}.
+     * Creates an XML file at t
+     * he {@code filePath} with the {@code data}.
      */
     private <T> void createDataFileWithData(T data, Path filePath) {
         try {
