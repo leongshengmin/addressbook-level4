@@ -11,7 +11,7 @@ public class Barcode {
 
     private final String value;
 
-    private static final int BARCODE_LENGTH = 13;
+    private static final int BARCODE_LENGTH = 12;
     public static final String MESSAGE_BARCODE_CONSTRAINTS = "Barcode numbers should be of the format "
             + "<Country code><Manufacturer code><Product Item code><Check Digit> "
             + "and adhere to the following constraints:\n"
