@@ -44,6 +44,7 @@ public class TestApp extends MainApp {
             createDataFileWithData(new XmlSerializableAddressBook(this.initialDataSupplier.get()),
                     getBackupFilePath());
         }
+
     }
 
     /**
