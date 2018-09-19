@@ -1,7 +1,6 @@
 package seedu.address.storage;
 
 import com.google.common.eventbus.Subscribe;
-
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.events.model.AddressBookChangedEvent;
@@ -27,6 +26,7 @@ public class StorageManager extends ComponentManager implements Storage {
 
     /**
      * Constructor for StorageManager class
+     *
      * @param addressBookStorage
      * @param userPrefsStorage
      */

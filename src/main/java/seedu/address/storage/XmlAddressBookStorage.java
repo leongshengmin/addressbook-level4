@@ -15,7 +15,6 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 import static java.util.Objects.requireNonNull;
-
 /**
  * A class to access AddressBook data stored as an xml file on the hard disk.
  */
