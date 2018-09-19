@@ -24,6 +24,7 @@ public class Barcode {
 
     /**
      * Constructs a {@code Barcode}
+     *
      * @param barcodeNumber unique identification number of this product
      */
     public Barcode(String barcodeNumber) {
@@ -34,6 +35,7 @@ public class Barcode {
 
     /**
      * Returns if a given barcode number is valid.
+     *
      * @param barcodeNumber
      * @return
      */
@@ -43,6 +45,7 @@ public class Barcode {
 
     /**
      * Returns if a given barcode number is of the correct format.
+     *
      * @param barcodeNumber
      * @return
      */
@@ -52,6 +55,7 @@ public class Barcode {
 
     /**
      * Returns the check digit in the barcode.
+     *
      * @param barcodeNumber
      * @return
      */
@@ -62,6 +66,7 @@ public class Barcode {
     /**
      * Returns if the individual digits of the barcode are valid by checking against
      * the check digit.
+     *
      * @param barcodeNumber
      * @param checkDigit
      * @return
@@ -89,6 +94,7 @@ public class Barcode {
     /**
      * Returns the smallest positive integer such that adding this integer
      * to {@code number} will give a number divisible by 10.
+     *
      * @param number
      * @return
      */
