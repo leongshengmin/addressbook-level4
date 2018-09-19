@@ -20,6 +20,7 @@ public class FileUtil {
     /**
      * Returns true if {@code path} can be converted into a {@code Path} via {@link Paths#get(String)},
      * otherwise returns false.
+     *
      * @param path A string representing the file path. Cannot be null.
      */
     public static boolean isValidPath(String path) {
@@ -33,6 +34,7 @@ public class FileUtil {
 
     /**
      * Creates a file if it does not exist along with its missing parent directories.
+     *
      * @throws IOException if the file or directory cannot be created.
      */
     public static void createIfMissing(Path file) throws IOException {
@@ -82,15 +84,17 @@ public class FileUtil {
 
     /**
      * Returns a filepath with the file extension removed.
+     *
      * @param path filepath with a file extension.
      */
     private static String[] removeFileExtension(String path) {
         int splitPoint = getSplitPoint(path);
-        return new String[] { path.substring(0, splitPoint - 1), path.substring(splitPoint) };
+        return new String[]{path.substring(0, splitPoint - 1), path.substring(splitPoint)};
     }
 
     /**
      * Returns a filepath for backup file.
+     *
      * @param path filepath of a regular file.
      * @return
      */
@@ -104,6 +108,7 @@ public class FileUtil {
 
     /**
      * Checks if a given path has a file extension.
+     *
      * @param path
      * @return
      */
@@ -114,6 +119,7 @@ public class FileUtil {
 
     /**
      * Retrieves the extension of a given path.
+     *
      * @param path
      * @return
      */
@@ -124,6 +130,7 @@ public class FileUtil {
 
     /**
      * Retrieves the index seperating the file name and the file extension.
+     *
      * @param path
      * @return
      */
