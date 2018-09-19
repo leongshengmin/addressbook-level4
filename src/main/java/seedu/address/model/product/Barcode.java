@@ -9,6 +9,8 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
  */
 public class Barcode {
 
+    private final String value;
+
     private static final int BARCODE_LENGTH = 13;
     public static final String MESSAGE_BARCODE_CONSTRAINTS = "Barcode numbers should be of the format "
             + "<Country code><Manufacturer code><Product Item code><Check Digit> "
@@ -19,7 +21,6 @@ public class Barcode {
             + "4. The Product Item code should be a 5 digit positive integer.\n"
             + "5. The Check Digit verifies if the previous fields are all correct. "
             + "This should be a single digit positive integer.\n";
-    private final String value;
 
     /**
      * Constructs a {@code Barcode}
@@ -66,8 +67,9 @@ public class Barcode {
      * @return
      */
     private static boolean verifyDigits(String barcodeNumber, int checkDigit) {
-        final int MULT = 3;
-        int firstSum = 0, secondSum = 0;
+        final int mult = 3;
+        int firstSum = 0;
+        int secondSum = 0;
         int idx = BARCODE_LENGTH - 1;
         while (idx >= 0) {
             int digit = barcodeNumber.charAt(idx);
@@ -78,7 +80,7 @@ public class Barcode {
             }
             idx--;
         }
-        firstSum *= MULT;
+        firstSum *= mult;
         int sum = firstSum + secondSum;
         int formMultipleOfTen = formMultipleOfTen(sum);
         return checkDigit == formMultipleOfTen;
