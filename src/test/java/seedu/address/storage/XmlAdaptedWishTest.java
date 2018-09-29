@@ -11,23 +11,23 @@ import java.util.stream.Collectors;
 import org.junit.Test;
 
 import seedu.address.commons.exceptions.IllegalValueException;
-import seedu.address.model.wish.Address;
 import seedu.address.model.wish.Email;
 import seedu.address.model.wish.Name;
-import seedu.address.model.wish.Phone;
+import seedu.address.model.wish.Price;
+import seedu.address.model.wish.Url;
 import seedu.address.testutil.Assert;
 
 public class XmlAdaptedWishTest {
     private static final String INVALID_NAME = "R@chel";
-    private static final String INVALID_PHONE = "+651234";
+    private static final String INVALID_PRICE = "2.,asdaxczxc.231";
     private static final String INVALID_ADDRESS = " ";
     private static final String INVALID_EMAIL = "example.com";
     private static final String INVALID_TAG = "#friend";
 
     private static final String VALID_NAME = BENSON.getName().toString();
-    private static final String VALID_PHONE = BENSON.getPhone().toString();
+    private static final String VALID_PRICE = BENSON.getPrice().toString();
     private static final String VALID_EMAIL = BENSON.getEmail().toString();
-    private static final String VALID_ADDRESS = BENSON.getAddress().toString();
+    private static final String VALID_ADDRESS = BENSON.getUrl().toString();
     private static final List<XmlAdaptedTag> VALID_TAGS = BENSON.getTags().stream()
             .map(XmlAdaptedTag::new)
             .collect(Collectors.toList());
@@ -41,44 +41,44 @@ public class XmlAdaptedWishTest {
     @Test
     public void toModelType_invalidName_throwsIllegalValueException() {
         XmlAdaptedWish wish =
-                new XmlAdaptedWish(INVALID_NAME, VALID_PHONE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
+                new XmlAdaptedWish(INVALID_NAME, VALID_PRICE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
         String expectedMessage = Name.MESSAGE_NAME_CONSTRAINTS;
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
     public void toModelType_nullName_throwsIllegalValueException() {
-        XmlAdaptedWish wish = new XmlAdaptedWish(null, VALID_PHONE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
+        XmlAdaptedWish wish = new XmlAdaptedWish(null, VALID_PRICE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
         String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Name.class.getSimpleName());
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
-    public void toModelType_invalidPhone_throwsIllegalValueException() {
+    public void toModelType_invalidPrice_throwsIllegalValueException() {
         XmlAdaptedWish wish =
-                new XmlAdaptedWish(VALID_NAME, INVALID_PHONE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
-        String expectedMessage = Phone.MESSAGE_PHONE_CONSTRAINTS;
+                new XmlAdaptedWish(VALID_NAME, INVALID_PRICE, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
+        String expectedMessage = Price.MESSAGE_PRICE_CONSTRAINTS;
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
-    public void toModelType_nullPhone_throwsIllegalValueException() {
+    public void toModelType_nullPrice_throwsIllegalValueException() {
         XmlAdaptedWish wish = new XmlAdaptedWish(VALID_NAME, null, VALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
-        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Phone.class.getSimpleName());
+        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Price.class.getSimpleName());
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
     public void toModelType_invalidEmail_throwsIllegalValueException() {
         XmlAdaptedWish wish =
-                new XmlAdaptedWish(VALID_NAME, VALID_PHONE, INVALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
+                new XmlAdaptedWish(VALID_NAME, VALID_PRICE, INVALID_EMAIL, VALID_ADDRESS, VALID_TAGS);
         String expectedMessage = Email.MESSAGE_EMAIL_CONSTRAINTS;
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
     public void toModelType_nullEmail_throwsIllegalValueException() {
-        XmlAdaptedWish wish = new XmlAdaptedWish(VALID_NAME, VALID_PHONE, null, VALID_ADDRESS, VALID_TAGS);
+        XmlAdaptedWish wish = new XmlAdaptedWish(VALID_NAME, VALID_PRICE, null, VALID_ADDRESS, VALID_TAGS);
         String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Email.class.getSimpleName());
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
@@ -86,15 +86,15 @@ public class XmlAdaptedWishTest {
     @Test
     public void toModelType_invalidAddress_throwsIllegalValueException() {
         XmlAdaptedWish wish =
-                new XmlAdaptedWish(VALID_NAME, VALID_PHONE, VALID_EMAIL, INVALID_ADDRESS, VALID_TAGS);
-        String expectedMessage = Address.MESSAGE_ADDRESS_CONSTRAINTS;
+                new XmlAdaptedWish(VALID_NAME, VALID_PRICE, VALID_EMAIL, INVALID_ADDRESS, VALID_TAGS);
+        String expectedMessage = Url.MESSAGE_URL_CONSTRAINTS;
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
     @Test
     public void toModelType_nullAddress_throwsIllegalValueException() {
-        XmlAdaptedWish wish = new XmlAdaptedWish(VALID_NAME, VALID_PHONE, VALID_EMAIL, null, VALID_TAGS);
-        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Address.class.getSimpleName());
+        XmlAdaptedWish wish = new XmlAdaptedWish(VALID_NAME, VALID_PRICE, VALID_EMAIL, null, VALID_TAGS);
+        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Url.class.getSimpleName());
         Assert.assertThrows(IllegalValueException.class, expectedMessage, wish::toModelType);
     }
 
@@ -103,7 +103,7 @@ public class XmlAdaptedWishTest {
         List<XmlAdaptedTag> invalidTags = new ArrayList<>(VALID_TAGS);
         invalidTags.add(new XmlAdaptedTag(INVALID_TAG));
         XmlAdaptedWish wish =
-                new XmlAdaptedWish(VALID_NAME, VALID_PHONE, VALID_EMAIL, VALID_ADDRESS, invalidTags);
+                new XmlAdaptedWish(VALID_NAME, VALID_PRICE, VALID_EMAIL, VALID_ADDRESS, invalidTags);
         Assert.assertThrows(IllegalValueException.class, wish::toModelType);
     }
 

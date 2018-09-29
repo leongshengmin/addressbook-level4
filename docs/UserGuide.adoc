@@ -166,7 +166,7 @@ Examples:
 `select 2` +
 Selects the 2nd wish in the wish list.
 
-* `find phone` +
+* `find price` +
 `select 1` +
 Selects the 1st wish in the results of the `find` command.
 

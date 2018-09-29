@@ -3,9 +3,10 @@
     <!-- Person with invalid name field -->
     <wishes>
         <name>Ha!ns Mu@ster</name>
-        <phone isPrivate="false">9482424</phone>
+        <price isPrivate="false">9482424</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">hans@example.com</email>
-        <address isPrivate="false">4th street</address>
+        <url isPrivate="false">https://www.amazon.com/gp/product/B07D998212</url>
         <remark></remark>
     </wishes>
 </wishbook>

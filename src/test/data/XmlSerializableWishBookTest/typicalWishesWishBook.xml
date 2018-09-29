@@ -3,55 +3,62 @@
 <wishbook>
     <wishes>
         <name>Alice Pauline</name>
-        <phone>94351253</phone>
+        <price>94.35</price>
+        <savedAmount>0.00</savedAmount>
         <email>alice@example.com</email>
-        <address>123, Jurong West Ave 6, #08-111</address>
+        <url>https://www.lazada.sg/products/ps4-092-hori-real-arcade-pron-hayabusaps4ps3pc-i223784444-s340908955.html</url>
         <tagged>friends</tagged>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Benson Meier</name>
-        <phone>98765432</phone>
+        <price>98.76</price>
+        <savedAmount>0.00</savedAmount>
         <email>johnd@example.com</email>
-        <address>311, Clementi Ave 2, #02-25</address>
+        <url>https://www.amazon.com/Apple-iPhone-Fully-Unlocked-32GB/dp/B0731HBTZ7</url>
         <tagged>owesMoney</tagged>
         <tagged>friends</tagged>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Carl Kurz</name>
-        <phone>95352563</phone>
+        <price>98.76</price>
+        <savedAmount>0.00</savedAmount>
         <email>heinz@example.com</email>
-        <address>wall street</address>
+        <url>https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Daniel Meier</name>
-        <phone>87652533</phone>
+        <price>87.65</price>
+        <savedAmount>0.00</savedAmount>
         <email>cornelia@example.com</email>
-        <address>10th street</address>
+        <url>https://www.amazon.com/Logitech-Mechanical-Keyboard-Romer-Switches/dp/B071VHYZ62</url>
         <tagged>friends</tagged>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Elle Meyer</name>
-        <phone>9482224</phone>
+        <price>94.82</price>
+        <savedAmount>0.00</savedAmount>
         <email>werner@example.com</email>
-        <address>michegan ave</address>
+        <url>https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Fiona Kunz</name>
-        <phone>9482427</phone>
+        <price>94.82</price>
+        <savedAmount>0.00</savedAmount>
         <email>lydia@example.com</email>
-        <address>little tokyo</address>
+        <url>https://www.lazada.sg/products/nintendo-switch-neon-console-1-year-local-warranty-best-seller-i180040203-s230048296.html</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>George Best</name>
-        <phone>9482442</phone>
+        <price>94.82</price>
+        <savedAmount>0.00</savedAmount>
         <email>anna@example.com</email>
-        <address>4th street</address>
+        <url>https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
         <remark></remark>
     </wishes>
 </wishbook>

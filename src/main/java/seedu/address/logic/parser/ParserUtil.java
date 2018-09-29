@@ -10,10 +10,10 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.tag.Tag;
-import seedu.address.model.wish.Address;
 import seedu.address.model.wish.Email;
 import seedu.address.model.wish.Name;
-import seedu.address.model.wish.Phone;
+import seedu.address.model.wish.Price;
+import seedu.address.model.wish.Url;
 
 /**
  * Contains utility methods used for parsing strings in the various *Parser classes.
@@ -56,28 +56,28 @@ public class ParserUtil {
      *
      * @throws ParseException if the given {@code phone} is invalid.
      */
-    public static Phone parsePhone(String phone) throws ParseException {
+    public static Price parsePrice(String phone) throws ParseException {
         requireNonNull(phone);
-        String trimmedPhone = phone.trim();
-        if (!Phone.isValidPhone(trimmedPhone)) {
-            throw new ParseException(Phone.MESSAGE_PHONE_CONSTRAINTS);
+        String trimmedPrice = phone.trim();
+        if (!Price.isValidPrice(trimmedPrice)) {
+            throw new ParseException(Price.MESSAGE_PRICE_CONSTRAINTS);
         }
-        return new Phone(trimmedPhone);
+        return new Price(trimmedPrice);
     }
 
     /**
-     * Parses a {@code String address} into an {@code Address}.
+     * Parses a {@code String url} into an {@code Url}.
      * Leading and trailing whitespaces will be trimmed.
      *
-     * @throws ParseException if the given {@code address} is invalid.
+     * @throws ParseException if the given {@code url} is invalid.
      */
-    public static Address parseAddress(String address) throws ParseException {
-        requireNonNull(address);
-        String trimmedAddress = address.trim();
-        if (!Address.isValidAddress(trimmedAddress)) {
-            throw new ParseException(Address.MESSAGE_ADDRESS_CONSTRAINTS);
+    public static Url parseUrl(String url) throws ParseException {
+        requireNonNull(url);
+        String trimmedUrl = url.trim();
+        if (!Url.isValidUrl(trimmedUrl)) {
+            throw new ParseException(Url.MESSAGE_URL_CONSTRAINTS);
         }
-        return new Address(trimmedAddress);
+        return new Url(trimmedUrl);
     }
 
     /**

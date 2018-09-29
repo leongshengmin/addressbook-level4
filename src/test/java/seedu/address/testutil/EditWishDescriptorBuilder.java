@@ -6,10 +6,10 @@ import java.util.stream.Stream;
 
 import seedu.address.logic.commands.EditCommand.EditWishDescriptor;
 import seedu.address.model.tag.Tag;
-import seedu.address.model.wish.Address;
 import seedu.address.model.wish.Email;
 import seedu.address.model.wish.Name;
-import seedu.address.model.wish.Phone;
+import seedu.address.model.wish.Price;
+import seedu.address.model.wish.Url;
 import seedu.address.model.wish.Wish;
 
 /**
@@ -33,9 +33,9 @@ public class EditWishDescriptorBuilder {
     public EditWishDescriptorBuilder(Wish wish) {
         descriptor = new EditWishDescriptor();
         descriptor.setName(wish.getName());
-        descriptor.setPhone(wish.getPhone());
+        descriptor.setPrice(wish.getPrice());
         descriptor.setEmail(wish.getEmail());
-        descriptor.setAddress(wish.getAddress());
+        descriptor.setUrl(wish.getUrl());
         descriptor.setTags(wish.getTags());
     }
 
@@ -48,10 +48,10 @@ public class EditWishDescriptorBuilder {
     }
 
     /**
-     * Sets the {@code Phone} of the {@code EditPersonDescriptor} that we are building.
+     * Sets the {@code Price} of the {@code EditPersonDescriptor} that we are building.
      */
-    public EditWishDescriptorBuilder withPhone(String phone) {
-        descriptor.setPhone(new Phone(phone));
+    public EditWishDescriptorBuilder withPrice(String price) {
+        descriptor.setPrice(new Price(price));
         return this;
     }
 
@@ -64,10 +64,10 @@ public class EditWishDescriptorBuilder {
     }
 
     /**
-     * Sets the {@code Address} of the {@code EditPersonDescriptor} that we are building.
+     * Sets the {@code Url} of the {@code EditPersonDescriptor} that we are building.
      */
-    public EditWishDescriptorBuilder withAddress(String address) {
-        descriptor.setAddress(new Address(address));
+    public EditWishDescriptorBuilder withAddress(String url) {
+        descriptor.setUrl(new Url(url));
         return this;
     }
 

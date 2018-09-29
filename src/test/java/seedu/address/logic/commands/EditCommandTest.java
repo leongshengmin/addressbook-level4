@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.DESC_AMY;
 import static seedu.address.logic.commands.CommandTestUtil.DESC_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOB;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_PHONE_BOB;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_PRICE_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
@@ -58,11 +58,11 @@ public class EditCommandTest {
         Wish lastWish = model.getFilteredWishList().get(indexLastWish.getZeroBased());
 
         WishBuilder wishInList = new WishBuilder(lastWish);
-        Wish editedWish = wishInList.withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)
+        Wish editedWish = wishInList.withName(VALID_NAME_BOB).withPrice(VALID_PRICE_BOB)
                 .withTags(VALID_TAG_HUSBAND).build();
 
         EditWishDescriptor descriptor = new EditWishDescriptorBuilder().withName(VALID_NAME_BOB)
-                .withPhone(VALID_PHONE_BOB).withTags(VALID_TAG_HUSBAND).build();
+                .withPrice(VALID_PRICE_BOB).withTags(VALID_TAG_HUSBAND).build();
         EditCommand editCommand = new EditCommand(indexLastWish, descriptor);
 
         String expectedMessage = String.format(EditCommand.MESSAGE_EDIT_WISH_SUCCESS, editedWish);

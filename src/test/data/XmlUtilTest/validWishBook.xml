@@ -2,65 +2,74 @@
 <wishbook>
     <wishes>
         <name>Hans Muster</name>
-        <phone isPrivate="false">9482424</phone>
+        <price isPrivate="false">9482424</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">hans@example.com</email>
-        <address isPrivate="false">4th street</address>
+        <url isPrivate="false">https://www.amazon.com/Logitech-Mechanical-Keyboard-Romer-Switches/dp/B071VHYZ62</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Ruth Mueller</name>
-        <phone isPrivate="false">87249245</phone>
+        <price isPrivate="false">87249245</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">ruth@example.com</email>
-        <address isPrivate="false">81th street</address>
+        <url isPrivate="false">https://www.amazon.com/Apple-iPhone-Fully-Unlocked-32GB/dp/B0731HBTZ7</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Heinz Kurz</name>
-        <phone isPrivate="false">95352563</phone>
+        <price isPrivate="false">95352563</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">heinz@example.com</email>
-        <address isPrivate="false">wall street</address>
+        <url isPrivate="false">https://www.amazon.com/Logitech-Mechanical-Keyboard-Romer-Switches/dp/B071VHYZ62</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Cornelia Meier</name>
-        <phone isPrivate="false">87652533</phone>
+        <price isPrivate="false">87652533</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">cornelia@example.com</email>
-        <address isPrivate="false">10th street</address>
+        <url isPrivate="false">https://www.lazada.sg/products/nintendo-switch-neon-console-1-year-local-warranty-best-seller-i180040203-s230048296.html</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Werner Meyer</name>
-        <phone isPrivate="false">9482224</phone>
+        <price isPrivate="false">9482224</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">werner@example.com</email>
-        <address isPrivate="false">michegan ave</address>
+        <url isPrivate="false">https://www.lazada.sg/products/sony-playstation-4-pro-1tb-console-local-stock-with-sony-warranty-i100009437-s100011973.html</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Lydia Kunz</name>
-        <phone isPrivate="false">9482427</phone>
+        <price isPrivate="false">9482427</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">lydia@example.com</email>
-        <address isPrivate="false">little tokyo</address>
+        <url isPrivate="false">https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Anna Best</name>
-        <phone isPrivate="false">9482442</phone>
+        <price isPrivate="false">9482442</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">anna@example.com</email>
-        <address isPrivate="false">4th street</address>
+        <url isPrivate="false">https://www.amazon.com/gp/product/B07D998212</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Stefan Meier</name>
-        <phone isPrivate="false">8482424</phone>
+        <price isPrivate="false">8482424</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">stefan@example.com</email>
-        <address isPrivate="false">little india</address>
+        <url isPrivate="false">https://www.amazon.com/gp/product/B07D998212</url>
         <remark></remark>
     </wishes>
     <wishes>
         <name>Martin Mueller</name>
-        <phone isPrivate="false">8482131</phone>
+        <price isPrivate="false">8482131</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">hans@example.com</email>
-        <address isPrivate="false">chicago ave</address>
+        <url isPrivate="false">https://www.amazon.com/gp/product/B07D998212</url>
         <remark></remark>
     </wishes>
 </wishbook>

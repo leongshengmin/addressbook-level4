@@ -3,9 +3,10 @@
     <!-- Person with invalid email field -->
     <wishes>
         <name>Hans Muster</name>
-        <phone isPrivate="false">9482424</phone>
+        <price isPrivate="false">9482424</price>
+        <savedAmount>0.00</savedAmount>
         <email isPrivate="false">hans@exam!32ple</email>
-        <address isPrivate="false">4th street</address>
+        <url isPrivate="false">https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
         <remark></remark>
     </wishes>
 </wishbook>

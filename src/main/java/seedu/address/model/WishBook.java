@@ -64,7 +64,7 @@ public class WishBook implements ReadOnlyWishBook {
     //// wish-level operations
 
     /**
-     * Returns true if a wish with the same identity as {@code wish} exists in the address book.
+     * Returns true if a wish with the same identity as {@code wish} exists in the wish book.
      */
     public boolean hasWish(Wish wish) {
         requireNonNull(wish);
@@ -72,8 +72,8 @@ public class WishBook implements ReadOnlyWishBook {
     }
 
     /**
-     * Adds a wish to the address book.
-     * The wish must not already exist in the address book.
+     * Adds a wish to the wish book.
+     * The wish must not already exist in the wish book.
      */
     public void addWish(Wish p) {
         wishes.add(p);
@@ -81,8 +81,8 @@ public class WishBook implements ReadOnlyWishBook {
 
     /**
      * Replaces the given wish {@code target} in the list with {@code editedPerson}.
-     * {@code target} must exist in the address book.
-     * The wish identity of {@code editedPerson} must not be the same as another existing wish in the address book.
+     * {@code target} must exist in the wish book.
+     * The wish identity of {@code editedPerson} must not be the same as another existing wish in the wish book.
      */
     public void updateWish(Wish target, Wish editedWish) {
         requireNonNull(editedWish);
@@ -92,7 +92,7 @@ public class WishBook implements ReadOnlyWishBook {
 
     /**
      * Removes {@code key} from this {@code WishBook}.
-     * {@code key} must exist in the address book.
+     * {@code key} must exist in the wish book.
      */
     public void removeWish(Wish key) {
         wishes.remove(key);
@@ -110,11 +110,11 @@ public class WishBook implements ReadOnlyWishBook {
             modifiedTags.removeIf(t -> t == tag);
 
             Wish modifiedWish = new Wish(wish.getName(),
-                    wish.getPhone(),
+                    wish.getPrice(),
                     wish.getEmail(),
-                    wish.getAddress(),
-                    wish.getRemark(),
-                    modifiedTags);
+                    wish.getUrl(),
+                    wish.getSavedAmount(),
+                    wish.getRemark(), modifiedTags);
 
             modifiedWishes.add(modifiedWish);
         }

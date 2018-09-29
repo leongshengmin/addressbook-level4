@@ -16,16 +16,18 @@ import seedu.address.model.wish.Wish;
 public class WishCardHandle extends NodeHandle<Node> {
     private static final String ID_FIELD_ID = "#id";
     private static final String NAME_FIELD_ID = "#name";
-    private static final String ADDRESS_FIELD_ID = "#address";
-    private static final String PHONE_FIELD_ID = "#phone";
+    private static final String URL_FIELD_ID = "#url";
+    private static final String PRICE_FIELD_ID = "#price";
+    private static final String SAVED_AMOUNT_FIELD_ID = "#savedAmount";
     private static final String EMAIL_FIELD_ID = "#email";
     private static final String TAGS_FIELD_ID = "#tags";
     private static final String REMARK_FIELD_ID = "#remark";
 
     private final Label idLabel;
     private final Label nameLabel;
-    private final Label addressLabel;
-    private final Label phoneLabel;
+    private final Label urlLabel;
+    private final Label priceLabel;
+    private final Label savedAmountLabel;
     private final Label emailLabel;
     private final List<Label> tagLabels;
     private final Label remarkLabel;
@@ -35,8 +37,9 @@ public class WishCardHandle extends NodeHandle<Node> {
 
         idLabel = getChildNode(ID_FIELD_ID);
         nameLabel = getChildNode(NAME_FIELD_ID);
-        addressLabel = getChildNode(ADDRESS_FIELD_ID);
-        phoneLabel = getChildNode(PHONE_FIELD_ID);
+        urlLabel = getChildNode(URL_FIELD_ID);
+        priceLabel = getChildNode(PRICE_FIELD_ID);
+        savedAmountLabel = getChildNode(SAVED_AMOUNT_FIELD_ID);
         emailLabel = getChildNode(EMAIL_FIELD_ID);
         remarkLabel = getChildNode(REMARK_FIELD_ID);
 
@@ -57,11 +60,15 @@ public class WishCardHandle extends NodeHandle<Node> {
     }
 
     public String getAddress() {
-        return addressLabel.getText();
+        return urlLabel.getText();
     }
 
-    public String getPhone() {
-        return phoneLabel.getText();
+    public String getPrice() {
+        return priceLabel.getText();
+    }
+
+    public String getSavedAmount() {
+        return savedAmountLabel.getText();
     }
 
     public String getEmail() {
@@ -84,8 +91,9 @@ public class WishCardHandle extends NodeHandle<Node> {
      */
     public boolean equals(Wish wish) {
         return getName().equals(wish.getName().fullName)
-                && getAddress().equals(wish.getAddress().value)
-                && getPhone().equals(wish.getPhone().value)
+                && getAddress().equals(wish.getUrl().value)
+                && getPrice().equals(wish.getPrice().toString())
+                // TO-DO: add saved amount
                 && getEmail().equals(wish.getEmail().value)
                 && ImmutableMultiset.copyOf(getTags()).equals(ImmutableMultiset.copyOf(wish.getTags().stream()
                         .map(tag -> tag.tagName)

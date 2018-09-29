@@ -112,12 +112,12 @@ public class FindCommandSystemTest extends WishBookSystemTest {
         assertSelectedCardUnchanged();
 
         /* Case: find phone number of wish in wish book -> 0 wishes found */
-        command = FindCommand.COMMAND_WORD + " " + DANIEL.getPhone().value;
+        command = FindCommand.COMMAND_WORD + " " + DANIEL.getPrice().value;
         assertCommandSuccess(command, expectedModel);
         assertSelectedCardUnchanged();
 
         /* Case: find wish of wish in wish book -> 0 wishes found */
-        command = FindCommand.COMMAND_WORD + " " + DANIEL.getAddress().value;
+        command = FindCommand.COMMAND_WORD + " " + DANIEL.getUrl().value;
         assertCommandSuccess(command, expectedModel);
         assertSelectedCardUnchanged();
 

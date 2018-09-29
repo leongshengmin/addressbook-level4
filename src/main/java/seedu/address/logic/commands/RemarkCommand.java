@@ -61,8 +61,8 @@ public class RemarkCommand extends Command {
      * with updated Remark.
      */
     private static Wish createUpdatedRemarkWish(Wish wishToEdit, Remark remark) {
-        return new Wish(wishToEdit.getName(), wishToEdit.getPhone(), wishToEdit.getEmail(),
-                wishToEdit.getAddress(), remark, wishToEdit.getTags());
+        return new Wish(wishToEdit.getName(), wishToEdit.getPrice(), wishToEdit.getEmail(),
+                wishToEdit.getUrl(), wishToEdit.getSavedAmount(), remark, wishToEdit.getTags());
     }
 
     @Override

@@ -3,8 +3,8 @@ package seedu.address.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_URL_BOB;
 import static seedu.address.testutil.TypicalWishes.ALICE;
 import static seedu.address.testutil.TypicalWishes.getTypicalWishBook;
 
@@ -51,7 +51,7 @@ public class WishBookTest {
     @Test
     public void resetData_withDuplicateWishes_throwsDuplicateWishException() {
         // Two persons with the same identity fields
-        Wish editedAlice = new WishBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+        Wish editedAlice = new WishBuilder(ALICE).withUrl(VALID_URL_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
         List<Wish> newWishes = Arrays.asList(ALICE, editedAlice);
         WishBookStub newData = new WishBookStub(newWishes);
@@ -80,7 +80,7 @@ public class WishBookTest {
     @Test
     public void hasWish_wishWithSameIdentityFieldsInWishBook_returnsTrue() {
         wishBook.addWish(ALICE);
-        Wish editedAlice = new WishBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+        Wish editedAlice = new WishBuilder(ALICE).withUrl(VALID_URL_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
         assertTrue(wishBook.hasWish(editedAlice));
     }

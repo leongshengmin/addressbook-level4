@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <wish>
     <name>Hans Muster</name>
-    <phone>9482424</phone>
+    <price>9482424</price>
+    <savedAmount>0.00</savedAmount>
     <email>hans@example</email>
-    <address>4th street</address>
+    <url>https://www.amazon.com/gp/product/B07D998212</url>
     <tagged>friends</tagged>
     <remark></remark>
 </wish>

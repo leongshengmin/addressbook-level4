@@ -28,8 +28,9 @@
         <Label fx:id="name" text="\$first" styleClass="cell_big_label" />
       </HBox>
       <FlowPane fx:id="tags" />
-      <Label fx:id="phone" styleClass="cell_small_label" text="\$phone" />
-      <Label fx:id="address" styleClass="cell_small_label" text="\$address" />
+      <Label fx:id="savedAmount" styleClass="cell_small_label" text="\$savedAmount" />
+      <Label fx:id="price" styleClass="cell_small_label" text="\$price" />
+      <Label fx:id="url" styleClass="cell_small_label" text="\$url" />
       <Label fx:id="email" styleClass="cell_small_label" text="\$email" />
       <Label fx:id="remark" styleClass="cell_small_label" text="\$remark"/>
     </VBox>

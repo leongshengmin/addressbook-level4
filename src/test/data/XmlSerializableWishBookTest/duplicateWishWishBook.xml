@@ -3,9 +3,10 @@
 
     <wishes>
         <name>Alice Pauline</name>
-        <phone>94351253</phone>
+        <price>94351253</price>
+        <savedAmount>0.00</savedAmount>
         <email>alice@example.com</email>
-        <address>123, Jurong West Ave 6, #08-111</address>
+        <url>https://www.amazon.com/gp/product/B07D998212</url>
         <remark></remark>
         <tagged>friends</tagged>
     </wishes>
@@ -13,10 +14,11 @@
     <!-- Person with same identity as Alice Pauline -->
     <wishes>
         <name>Alice Pauline</name>
-        <phone>94351253</phone>
+        <price>94351253</price>
+        <savedAmount>0.00</savedAmount>
         <email>pauline@example.com</email>
         <remark></remark>
-        <address>4th street</address>
+        <url>https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV</url>
     </wishes>
 
 </wishbook>

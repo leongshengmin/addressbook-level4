@@ -5,11 +5,12 @@ import java.util.Set;
 
 import seedu.address.model.tag.Tag;
 import seedu.address.model.util.SampleDataUtil;
-import seedu.address.model.wish.Address;
 import seedu.address.model.wish.Email;
 import seedu.address.model.wish.Name;
-import seedu.address.model.wish.Phone;
+import seedu.address.model.wish.Price;
 import seedu.address.model.wish.Remark;
+import seedu.address.model.wish.SavedAmount;
+import seedu.address.model.wish.Url;
 import seedu.address.model.wish.Wish;
 
 /**
@@ -18,23 +19,27 @@ import seedu.address.model.wish.Wish;
 public class WishBuilder {
 
     public static final String DEFAULT_NAME = "Alice Pauline";
-    public static final String DEFAULT_PHONE = "85355255";
+    public static final String DEFAULT_PRICE = "85.53";
+    public static final String DEFAULT_SAVED_AMOUNT = "0.00";
     public static final String DEFAULT_EMAIL = "alice@gmail.com";
-    public static final String DEFAULT_ADDRESS = "123, Jurong West Ave 6, #08-111";
+    public static final String DEFAULT_URL = "https://www.lazada.sg/products/"
+            + "ps4-092-hori-real-arcade-pron-hayabusaps4ps3pc-i223784444-s340908955.html";
     public static final String DEFAULT_REMARK = "";
 
     private Name name;
-    private Phone phone;
+    private Price price;
+    private SavedAmount savedAmount;
     private Email email;
-    private Address address;
+    private Url url;
     private Remark remark;
     private Set<Tag> tags;
 
     public WishBuilder() {
         name = new Name(DEFAULT_NAME);
-        phone = new Phone(DEFAULT_PHONE);
+        price = new Price(DEFAULT_PRICE);
+        savedAmount = new SavedAmount(DEFAULT_SAVED_AMOUNT);
         email = new Email(DEFAULT_EMAIL);
-        address = new Address(DEFAULT_ADDRESS);
+        url = new Url(DEFAULT_URL);
         remark = new Remark(DEFAULT_REMARK);
         tags = new HashSet<>();
     }
@@ -44,9 +49,10 @@ public class WishBuilder {
      */
     public WishBuilder(Wish wishToCopy) {
         name = wishToCopy.getName();
-        phone = wishToCopy.getPhone();
+        price = wishToCopy.getPrice();
+        savedAmount = wishToCopy.getSavedAmount();
         email = wishToCopy.getEmail();
-        address = wishToCopy.getAddress();
+        url = wishToCopy.getUrl();
         remark = wishToCopy.getRemark();
         tags = new HashSet<>(wishToCopy.getTags());
     }
@@ -68,18 +74,26 @@ public class WishBuilder {
     }
 
     /**
-     * Sets the {@code Address} of the {@code Wish} that we are building.
+     * Sets the {@code Url} of the {@code Wish} that we are building.
      */
-    public WishBuilder withAddress(String address) {
-        this.address = new Address(address);
+    public WishBuilder withUrl(String url) {
+        this.url = new Url(url);
         return this;
     }
 
     /**
-     * Sets the {@code Phone} of the {@code Wish} that we are building.
+     * Sets the {@code Price} of the {@code Wish} that we are building.
      */
-    public WishBuilder withPhone(String phone) {
-        this.phone = new Phone(phone);
+    public WishBuilder withPrice(String price) {
+        this.price = new Price(price);
+        return this;
+    }
+
+    /**
+     * Sets the {@code SavedAmount} of the {@code Wish} that we are building.
+     */
+    public WishBuilder withSavedAmount(String savedAmount) {
+        this.savedAmount = new SavedAmount(savedAmount);
         return this;
     }
 
@@ -100,7 +114,7 @@ public class WishBuilder {
     }
 
     public Wish build() {
-        return new Wish(name, phone, email, address, remark, tags);
+        return new Wish(name, price, email, url, savedAmount, remark, tags);
     }
 
 }

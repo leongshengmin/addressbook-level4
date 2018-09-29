@@ -7,11 +7,12 @@ import java.util.stream.Collectors;
 import seedu.address.model.ReadOnlyWishBook;
 import seedu.address.model.WishBook;
 import seedu.address.model.tag.Tag;
-import seedu.address.model.wish.Address;
 import seedu.address.model.wish.Email;
 import seedu.address.model.wish.Name;
-import seedu.address.model.wish.Phone;
+import seedu.address.model.wish.Price;
 import seedu.address.model.wish.Remark;
+import seedu.address.model.wish.SavedAmount;
+import seedu.address.model.wish.Url;
 import seedu.address.model.wish.Wish;
 
 /**
@@ -21,24 +22,35 @@ public class SampleDataUtil {
     public static final Remark SAMPLE_REMARK_EMPTY = new Remark("");
     public static Wish[] getSampleWishes() {
         return new Wish[] {
-            new Wish(new Name("Alex Yeoh"), new Phone("87438807"), new Email("alexyeoh@example.com"),
-                new Address("Blk 30 Geylang Street 29, #06-40"), SAMPLE_REMARK_EMPTY,
-                getTagSet("friends")),
-            new Wish(new Name("Bernice Yu"), new Phone("99272758"), new Email("berniceyu@example.com"),
-                new Address("Blk 30 Lorong 3 Serangoon Gardens, #07-18"), SAMPLE_REMARK_EMPTY,
-                getTagSet("colleagues", "friends")),
-            new Wish(new Name("Charlotte Oliveiro"), new Phone("93210283"), new Email("charlotte@example.com"),
-                new Address("Blk 11 Ang Mo Kio Street 74, #11-04"), SAMPLE_REMARK_EMPTY,
-                getTagSet("neighbours")),
-            new Wish(new Name("David Li"), new Phone("91031282"), new Email("lidavid@example.com"),
-                new Address("Blk 436 Serangoon Gardens Street 26, #16-43"), SAMPLE_REMARK_EMPTY,
-                getTagSet("family")),
-            new Wish(new Name("Irfan Ibrahim"), new Phone("92492021"), new Email("irfan@example.com"),
-                new Address("Blk 47 Tampines Street 20, #17-35"), SAMPLE_REMARK_EMPTY,
-                getTagSet("classmates")),
-            new Wish(new Name("Roy Balakrishnan"), new Phone("92624417"), new Email("royb@example.com"),
-                new Address("Blk 45 Aljunied Street 85, #11-31"), SAMPLE_REMARK_EMPTY,
-                getTagSet("colleagues"))
+            new Wish(new Name("Apple iPhone 7"), new Price("87438807"), new Email("alexyeoh@example.com"),
+                    new Url("https://www.amazon.com/Apple-iPhone-Fully-Unlocked-32GB/dp/B0731HBTZ7"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("friends")),
+            new Wish(new Name("Logitech K840 Mechanical Keyboard"), new Price("99272758"),
+                    new Email("berniceyu@example.com"),
+                    new Url("https://www.amazon.com/Logitech-Mechanical-Keyboard-Romer-Switches/dp/B071VHYZ62"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("colleagues", "friends")),
+            new Wish(new Name("Nintendo Switch"), new Price("93210283"), new Email("charlotte@example.com"),
+                    new Url("https://www.lazada.sg/products/nintendo-switch-neon-console-"
+                            + "1-year-local-warranty-best-seller-i180040203-s230048296.html"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("neighbours")),
+            new Wish(new Name("PS4 Pro"), new Price("91031282"), new Email("lidavid@example.com"),
+                    new Url("https://www.lazada.sg/products/sony-playstation-4-pro-1tb-console-"
+                            + "local-stock-with-sony-warranty-i100009437-s100011973.html"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("family")),
+            new Wish(new Name("EVGA 1080 Ti Graphics Card"), new Price("92492021"),
+                    new Email("irfan@example.com"),
+                    new Url("https://www.amazon.com/EVGA-GeForce-Gaming-GDDR5X-Technology/dp/B0762Q49NV"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("classmates")),
+            new Wish(new Name("1TB SSD"), new Price("92624417"),
+                    new Email("royb@example.com"),
+                    new Url("https://www.amazon.com/gp/product/B07D998212"),
+                    new SavedAmount("0.00"),
+                    SAMPLE_REMARK_EMPTY, getTagSet("colleagues"))
         };
     }
 

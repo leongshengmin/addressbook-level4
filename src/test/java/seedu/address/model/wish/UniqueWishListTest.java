@@ -3,8 +3,8 @@ package seedu.address.model.wish;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_URL_BOB;
 import static seedu.address.testutil.TypicalWishes.ALICE;
 import static seedu.address.testutil.TypicalWishes.BOB;
 
@@ -46,7 +46,7 @@ public class UniqueWishListTest {
     @Test
     public void contains_wishWithSameIdentityFieldsInList_returnsTrue() {
         uniqueWishList.add(ALICE);
-        Wish editedAlice = new WishBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+        Wish editedAlice = new WishBuilder(ALICE).withUrl(VALID_URL_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
         assertTrue(uniqueWishList.contains(editedAlice));
     }
@@ -94,7 +94,7 @@ public class UniqueWishListTest {
     @Test
     public void setWish_editedWishHasSameIdentity_success() {
         uniqueWishList.add(ALICE);
-        Wish editedAlice = new WishBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+        Wish editedAlice = new WishBuilder(ALICE).withUrl(VALID_URL_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
         uniqueWishList.setWish(ALICE, editedAlice);
         UniqueWishList expectedUniqueWishList = new UniqueWishList();

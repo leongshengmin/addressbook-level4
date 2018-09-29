@@ -27,18 +27,28 @@ public class WishCard extends UiPart<Region> {
 
     @FXML
     private HBox cardPane;
+
     @FXML
     private Label name;
+
     @FXML
     private Label id;
+
     @FXML
-    private Label phone;
+    private Label price;
+
     @FXML
-    private Label address;
+    private Label savedAmount;
+
+    @FXML
+    private Label url;
+
     @FXML
     private Label email;
+
     @FXML
     private Label remark;
+
     @FXML
     private FlowPane tags;
 
@@ -47,8 +57,9 @@ public class WishCard extends UiPart<Region> {
         this.wish = wish;
         id.setText(displayedIndex + ". ");
         name.setText(wish.getName().fullName);
-        phone.setText(wish.getPhone().value);
-        address.setText(wish.getAddress().value);
+        price.setText(wish.getPrice().toString());
+        savedAmount.setText(wish.getSavedAmount().toString());
+        url.setText(wish.getUrl().value);
         email.setText(wish.getEmail().value);
         remark.setText(wish.getRemark().value);
         initTags(wish);

@@ -17,41 +17,47 @@ public class Wish {
 
     // Identity fields
     private final Name name;
-    private final Phone phone;
+    private final Price price;
+    private final SavedAmount savedAmount;
     private final Email email;
 
     // Data fields
-    private final Address address;
+    private final Url url;
     private final Remark remark;
     private final Set<Tag> tags = new HashSet<>();
 
     /**
      * Every field must be present and not null.
      */
-    public Wish(Name name, Phone phone, Email email, Address address, Remark remark, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, tags);
+    public Wish(Name name, Price price, Email email, Url url, SavedAmount savedAmount, Remark remark, Set<Tag> tags) {
+        requireAllNonNull(name, price, email, url, tags);
         this.name = name;
-        this.phone = phone;
+        this.price = price;
         this.email = email;
-        this.address = address;
+        this.url = url;
         this.tags.addAll(tags);
         this.remark = remark;
+        this.savedAmount = savedAmount;
     }
 
     public Name getName() {
         return name;
     }
 
-    public Phone getPhone() {
-        return phone;
+    public Price getPrice() {
+        return price;
     }
 
     public Email getEmail() {
         return email;
     }
 
-    public Address getAddress() {
-        return address;
+    public SavedAmount getSavedAmount() {
+        return savedAmount;
+    }
+
+    public Url getUrl() {
+        return url;
     }
 
     public Remark getRemark() {
@@ -77,7 +83,7 @@ public class Wish {
 
         return otherWish != null
                 && otherWish.getName().equals(getName())
-                && (otherWish.getPhone().equals(getPhone()) || otherWish.getEmail().equals(getEmail()));
+                && (otherWish.getPrice().equals(getPrice()) || otherWish.getEmail().equals(getEmail()));
     }
 
     /**
@@ -96,16 +102,16 @@ public class Wish {
 
         Wish otherWish = (Wish) other;
         return otherWish.getName().equals(getName())
-                && otherWish.getPhone().equals(getPhone())
+                && otherWish.getPrice().equals(getPrice())
                 && otherWish.getEmail().equals(getEmail())
-                && otherWish.getAddress().equals(getAddress())
+                && otherWish.getUrl().equals(getUrl())
                 && otherWish.getTags().equals(getTags());
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, email, address, tags);
+        return Objects.hash(name, price, email, url, tags);
     }
 
     @Override
@@ -113,11 +119,11 @@ public class Wish {
         final StringBuilder builder = new StringBuilder();
         builder.append(getName())
                 .append(" Phone: ")
-                .append(getPhone())
+                .append(getPrice())
                 .append(" Email: ")
                 .append(getEmail())
                 .append(" Address: ")
-                .append(getAddress())
+                .append(getUrl())
                 .append(" Remark: ")
                 .append(getRemark())
                 .append(" Tags: ");
