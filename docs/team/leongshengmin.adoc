@@ -137,13 +137,13 @@ include::../UserGuide.adoc[tag=savingsHistory]
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
 
-include::../DeveloperGuide.adoc[tag=savingsHistory]
+include::../DeveloperGuide.adoc[caption="Savings History", tag=savingsHistory]
 
 
 |===
 |_Proposed enhancement for V2.0_
 |===
 
-include::../DeveloperGuide.adoc[tag=savingsNotifications]
+include::../DeveloperGuide.adoc[tag=savingsNotifications, caption="Savings Notifications"]
 
 ---
